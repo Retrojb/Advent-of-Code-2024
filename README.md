@@ -11,9 +11,11 @@
 ### Day One
 
 #### Day one part one
-- Identify the distances between location IDs from 2 arrays
+- Calculate the distances between location IDs from 2 arrays
+- [Code](./src/DayOnePartOne.js)
+- [Data](./src/data/day1Data.js)
 
 #### Day one part two
--
+- [Code](./src/DayOnePartTwo.js)
 
 ### Day Two
