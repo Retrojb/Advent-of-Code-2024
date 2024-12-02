@@ -1,0 +1,15 @@
+{
+  "name": "advent-code",
+  "version": "1.0.0",
+  "description": "Code for advent calendar challenge",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dayOne:PartOne": "node src/DayOnePartOne.js",
+    "dayOne:PartTwo": "node src/DayOnePartTwo.js",
+    "dayTwo:PartOne": "node src/DayTwoPartOne.js"
+  },
+  "author": "retrojb",
+  "license": "UNLICENSED"
+}
