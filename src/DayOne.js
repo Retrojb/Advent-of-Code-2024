@@ -77,6 +77,11 @@ const getMatchingValues = () => {
     
 };
 
+/**
+ * Creates a frequency map for the values in the array
+ * @param {Array[int]} arr - the arry of values 
+ * @returns Object - The frequency map
+ */
 const createFrequencyMap = (arr) => {
     const frequencyMap = {};
     arr.forEach(val => {
@@ -89,6 +94,12 @@ const createFrequencyMap = (arr) => {
     return frequencyMap;
 }
 
+/**
+ * Determines the count of each matching value in the second array.
+ * @param {Array[int]} matchingValues - the array of values
+ * @param {Object} frequencyMap - the frequency map of the second array
+ * @returns Object - The counts of matching values
+ */
 const countMatchingValues = (matchingValues, frequencyMap) => {
     const counts = {};
     matchingValues.forEach(val => {
@@ -99,6 +110,11 @@ const countMatchingValues = (matchingValues, frequencyMap) => {
     return counts
 }
 
+/**
+ * Multiplies each count by the number of occurrences and finds total of sum of all
+ * @param {Object} matchingCount - The counts of matching values
+ * @returns int - total number of occurrences 
+ */
 const determineSimilarityScore = (matchingCount) => {
     let totalSum = 0;
     for (const val in matchingCount) {
