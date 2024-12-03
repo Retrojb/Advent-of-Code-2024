@@ -62,10 +62,53 @@ const calculateDistanceBetween = () => {
  */
 const totalDistance = () => {
     const total = distances.reduce((sum, current) => sum + current, 0);
-    console.log(total);
+    console.log('Total of distance', total);
     return total;
 };
 
+/** 
+ * Finds matching values between the first and second arrays. 
+ * @returns Array[int] 
+ */
+const getMatchingValues = () => {
+    const matchingValues = ascLocationIdSetOne.filter(value => ascLocationIdSetTwo.includes(value));
+    console.log('Matching Values: ',matchingValues);
+    return matchingValues;
+    
+};
+
+const createFrequencyMap = (arr) => {
+    const frequencyMap = {};
+    arr.forEach(val => {
+        if(frequencyMap[val]) {
+            frequencyMap[val]++;
+        } else {
+            frequencyMap[val] = 1;
+        }
+    });
+    return frequencyMap;
+}
+
+const countMatchingValues = (matchingValues, frequencyMap) => {
+    const counts = {};
+    matchingValues.forEach(val => {
+        counts[val] = frequencyMap[val] || 0;
+    });
+    console.log(counts);
+    
+    return counts
+}
+
+const determineSimilarityScore = (matchingCount) => {
+    let totalSum = 0;
+    for (const val in matchingCount) {
+        if (matchingCount.hasOwnProperty(val)) {
+            totalSum += matchingCount[val] * parseInt(val, 10)
+        }
+    }
+    console.log('Total Sum of Occurences:', totalSum);
+    
+}
 /**
  * Execute all
  */
@@ -74,7 +117,10 @@ export const execute = async () => {
    sortDataArrays()
    calculateDistanceBetween()
    totalDistance();
-    
+   const matchingValues = getMatchingValues()
+   const frequencyMap = createFrequencyMap(ascLocationIdSetTwo);
+   const matchingCount = countMatchingValues(matchingValues, frequencyMap);
+   determineSimilarityScore(matchingCount);
 };
 
 execute();

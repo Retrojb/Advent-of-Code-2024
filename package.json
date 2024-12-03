@@ -6,9 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dayOne:PartOne": "node src/DayOnePartOne.js",
-    "dayOne:PartTwo": "node src/DayOnePartTwo.js",
-    "dayTwo:PartOne": "node src/DayTwoPartOne.js"
+    "dayOne": "node src/DayOne.js",
+    "dayTwo": "node src/DayTwo.js"
   },
   "author": "retrojb",
   "license": "UNLICENSED"

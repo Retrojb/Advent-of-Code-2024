@@ -9,13 +9,9 @@
 
 --- 
 ### Day One
-
-#### Day one part one
 - Calculate the distances between location IDs from 2 arrays
+- Determine the similarity score of the distances
 - [Code](./src/DayOnePartOne.js)
 - [Data](./src/data/day1Data.js)
-
-#### Day one part two
-- [Code](./src/DayOnePartTwo.js)
 
 ### Day Two
